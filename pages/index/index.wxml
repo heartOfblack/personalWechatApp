@@ -1,0 +1,6 @@
+<!--index.wxml-->
+<view class='main'>
+<view>{{name}}</view>
+<button bindtap='scan'>扫一扫</button>
+ <view id='si' bindtap='gohref' data-href='pages/logs1/logs1'>跳转页面</view>
+</view>
