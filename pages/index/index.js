@@ -8,7 +8,20 @@ Page({
     userInfo: {},
     hasUserInfo: false,
     canIUse: wx.canIUse('button.open-type.getUserInfo'),
-    name:'siyuan'
+    name:'siyuan',
+    list:[1,2,3],
+    staffA: { firstName: 'Hulk', lastName: 'Hu' },
+    staffB: { firstName: 'Shang', lastName: 'You' },
+    staffC: { firstName: 'Gideon', lastName: 'Lin' },
+    array: [{
+      message: 'foo',
+    }, {
+      message: 'bar'
+    }]
+  },
+  show:function(e){
+console.log('自定义事件触发'+JSON.stringify(e.detail.detail));
+
   },
   //事件处理函数
   bindViewTap: function() {

@@ -1,0 +1,1 @@
+module.exports=function(){console.log('index2.wxs')}

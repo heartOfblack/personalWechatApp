@@ -1,0 +1,10 @@
+var gts=require("index2.wxs");
+
+module.exports = {
+  name:function(name) {
+    console.log(name);
+
+  },
+  getName:'siyuan',
+  gt:gts
+}

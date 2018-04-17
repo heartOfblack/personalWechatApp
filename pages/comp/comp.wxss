@@ -1,0 +1,5 @@
+/* pages/comp/comp.wxss */
+.name
+{
+  color: red;
+}

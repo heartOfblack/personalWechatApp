@@ -5,7 +5,12 @@
   "navigationBarTitleText": "WeCha1t",
   "navigationBarTextStyle": "black",
   "enablePullDownRefresh": true,
-  "backgroundTextStyle":"dark"
+  "usingComponents": {
+    "selectable-group":"./../comp/comp1"
+  },
+  "componentGenerics": {
+    "selectable": true
+  }
 
 
 

@@ -1,7 +1,9 @@
 {
   "pages":[
-    "pages/index/index",
-    "pages/logs/logs"
+    
+    "pages/index/index",   
+    "pages/logs/logs",
+    "pages/s/s"
   ],
   "window":{
     "backgroundTextStyle":"light",
@@ -17,9 +19,10 @@
 
 },
 {
-  "pagePath": "pages/logs/logs",
-  "text": "logs"
-}]}
+  "pagePath": "pages/s/s",
+  "text": "s"
+}]},
+"debug":false
 
   
 }
