@@ -1,6 +1,6 @@
 {
   "pages":[
-    
+   
     "pages/index/index",   
     "pages/logs/logs",
     "pages/s/s"
@@ -22,7 +22,7 @@
   "pagePath": "pages/s/s",
   "text": "s"
 }]},
-"debug":false
+"debug":true
 
   
 }

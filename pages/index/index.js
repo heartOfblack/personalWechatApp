@@ -38,6 +38,19 @@ this.setData({name:'wei'})
 
   },
   onLoad: function () {
+    var t=this;
+    wx.getUserInfo({
+      success: function (res) {
+      
+        console.log('用户信息'+JSON.stringify(res));
+      // t.userInfo=res;
+      t.setData({
+userInfo:res.userInfo
+
+      })
+     
+      }
+    })
     console.log(JSON.stringify(getCurrentPages()));
     if (app.globalData.userInfo) {
       this.setData({

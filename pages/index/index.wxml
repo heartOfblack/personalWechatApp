@@ -1,6 +1,8 @@
 <!--index.wxml-->
 
 <!-- <cmp bind:showEvent='show' name='sss'></cmp>  -->
-<selectable-group generic:selectable="cmp" bind:showEvent='show' name='sss' />
-
+<!-- <selectable-group generic:selectable="cmp" bind:showEvent='show' name='sss' /> -->
+<abs generic:select="custom"></abs>
+<view>{{userInfo.nickName+name}}</view>
+<!-- <image src='{{userInfo.avatarUrl}}'></image> -->
 <!--抽象组件的用法 -->

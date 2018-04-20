@@ -6,10 +6,9 @@
   "navigationBarTextStyle": "black",
   "enablePullDownRefresh": true,
   "usingComponents": {
-    "selectable-group":"./../comp/comp1"
-  },
-  "componentGenerics": {
-    "selectable": true
+    "abs":"../abstratComponent/abstratComponent",
+    "custom":"../comp/comp",
+    "custom1":"../comp/comp1"
   }
 
 

@@ -1,1 +1,2 @@
-<view class='name' bind:tap='getData'>222{{name+somedata.a}}</view>
+<view class='name' bind:tap='getData'>
+222464</view>

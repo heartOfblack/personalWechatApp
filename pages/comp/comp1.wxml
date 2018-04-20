@@ -1,6 +1,2 @@
-<view wx:for="{{labels}}" wx:key='*this'>
-  <label>
-    <selectable>1</selectable>
-  
-  </label>
-</view>
+<!--pages/comp/comp1.wxml-->
+<text>pages/comp/comp1.wxml</text>

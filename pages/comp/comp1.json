@@ -1,7 +1,4 @@
 {
   "component": true,
-  "usingComponents": {
-  "cmp": "./../comp/comp"
-
-  }
+  "usingComponents": {}
 }
