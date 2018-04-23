@@ -1,0 +1,6 @@
+<picker-view value='{{initValue}}'>
+<picker-view-column wx:for='{{first}}'></picker-view-column>
+<picker-view-column wx:for='{{sec}}'></picker-view-column>
+<picker-view-column wx:for='{{thi}}'></picker-view-column>
+</picker-view>
+
