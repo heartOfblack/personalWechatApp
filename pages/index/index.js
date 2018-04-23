@@ -8,7 +8,7 @@ Page({
     userInfo: {},
     hasUserInfo: false,
     canIUse: wx.canIUse('button.open-type.getUserInfo'),
-    name:'siyuan',
+    name:'siyuan1',
     list:[1,2,3],
     staffA: { firstName: 'Hulk', lastName: 'Hu' },
     staffB: { firstName: 'Shang', lastName: 'You' },
@@ -41,17 +41,11 @@ this.setData({name:'wei'})
     var t=this;
     wx.getUserInfo({
       success: function (res) {
-      
-        console.log('用户信息'+JSON.stringify(res));
-      // t.userInfo=res;
-      t.setData({
-userInfo:res.userInfo
-
-      })
+console.log(t.route+'      onload');
      
       }
     })
-    console.log(JSON.stringify(getCurrentPages()));
+ 
     if (app.globalData.userInfo) {
       this.setData({
         userInfo: app.globalData.userInfo,
