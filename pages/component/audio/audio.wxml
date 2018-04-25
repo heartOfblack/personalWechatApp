@@ -1,0 +1,14 @@
+<!--pages/component/audio/audio.wxml-->
+<wxs module='src'>
+module.exports={
+src:"../../resoures/2744.wav"
+}
+
+</wxs>
+
+<view>
+
+<audio src="{{src.src}}" poster="{{current.poster}}" name="{{current.name}}" author="{{current.author}}" action="{{audioAction}}" bindplay="audioPlayed" bindtimeupdate="audioTimeUpdated" controls></audio>
+</view>
+
+<!-- controls属性 是否展示播放控件。如果不写则默认看不见 -->

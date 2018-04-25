@@ -8,7 +8,8 @@
   "usingComponents": {
     "abs":"../abstratComponent/abstratComponent",
     "custom":"../comp/comp",
-    "custom1":"../comp/comp1"
+    "custom1":"../comp/comp1",
+    "au":"../component/audio/audio"
   }
 
 

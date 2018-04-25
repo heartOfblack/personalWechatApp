@@ -1,6 +1,8 @@
 //index.js
 //获取应用实例
+
 const app = getApp()
+const config=require("./../../config.js")
 
 Page({
   data: {
@@ -17,7 +19,8 @@ Page({
       message: 'foo',
     }, {
       message: 'bar'
-    }]
+    }],
+    config
   },
   show:function(e){
 console.log('自定义事件触发'+JSON.stringify(e.detail.detail));

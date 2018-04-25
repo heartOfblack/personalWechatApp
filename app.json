@@ -1,10 +1,11 @@
 {
   "pages": [
+    "pages/index/index", 
     "pages/picker/picker",
-    "pages/test/test",
-    "pages/index/index",
+    "pages/test/test",  
     "pages/logs/logs",
     "pages/s/s"
+   
   ],
   "window": {
     "backgroundTextStyle": "light",
