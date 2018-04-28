@@ -1,4 +1,5 @@
 // pages/component/audio/audio.js
+
 Component({
   /**
    * 组件的属性列表
@@ -7,15 +8,24 @@ Component({
 name:{
 type:String,
 value:'name properties'
+},
+play:{
+type:String,
+observer:function(newV,oldV){
+console.log(newV+'新值');
+
+//console.log(JSON.stringify(this.audio));
+this.play();
 
 }
-  },
-
+}
+  }
+  ,
   /**
    * 组件的初始数据
    */
   data: {
-current:{
+    audioData:{
     poster: 'http://y.gtimg.cn/music/photo_new/T002R300x300M000003rsKF44GyaSk.jpg?max_age=2592000',
     name: '此时此刻',
     author: '许巍',
@@ -23,7 +33,8 @@ current:{
   },
   audioAction: {
     method: 'pause'
-  }
+  },
+  cur:'未播放'
   },
 
   /**
@@ -32,6 +43,21 @@ current:{
   methods: {
     go:function(){
 console.log(this.data.name)
+
+    },
+    play:function(){
+this.setData({cur:'播放中'});
+this.audio = wx.createAudioContext('myaudio');
+console.log('音频内容'+JSON.stringify(this.audio));
+this.audio.autoPlay=true;
+this.audio.play();
+
+
+    },
+    pause: function () {
+      this.setData({ cur: '暂停播放' });
+      this.audio.pause();
+
 
     }
 

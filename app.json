@@ -1,11 +1,15 @@
 {
   "pages": [
-    "pages/index/index", 
+    
+    "pages/map/map",
+    "pages/video/video",
+    "pages/index/index",
+    "pages/audio/audio",
     "pages/picker/picker",
-    "pages/test/test",  
+    "pages/test/test",
     "pages/logs/logs",
-    "pages/s/s"
-   
+    "pages/s/s",
+    "pages/scroll-view-img/scroll-view-img"
   ],
   "window": {
     "backgroundTextStyle": "light",

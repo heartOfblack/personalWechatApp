@@ -6,6 +6,7 @@ const config=require("./../../config.js")
 
 Page({
   data: {
+    play:'false',
     motto: 'Hello World',
     userInfo: {},
     hasUserInfo: false,
@@ -20,7 +21,18 @@ Page({
     }, {
       message: 'bar'
     }],
-    config
+    config,
+   audioData: {
+    poster: 'http://y.gtimg.cn/music/photo_new/T002R300x300M000003rsKF44GyaSk.jpg?max_age=2592000',
+    name: '此时此刻',
+    author: '许巍',
+    src: '../../resoures/2744.wav',
+  }
+  },
+  onReady(){
+ this.setData({play:true});
+   
+
   },
   show:function(e){
 console.log('自定义事件触发'+JSON.stringify(e.detail.detail));
@@ -40,7 +52,8 @@ wx.stopPullDownRefresh();
 this.setData({name:'wei'})
 
   },
-  onLoad: function () {
+  onLoad: function (o) {
+    console.log('onload中');
     var t=this;
     wx.getUserInfo({
       success: function (res) {
