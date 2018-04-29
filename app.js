@@ -12,6 +12,7 @@ console.log('APP 运行函数'+JSON.stringify(option));
     wx.login({
       success: res => {
         // 发送 res.code 到后台换取 openId, sessionKey, unionId
+        console.log('登录成功'+JSON.stringify(res));
       }
     })
     // 获取用户信息

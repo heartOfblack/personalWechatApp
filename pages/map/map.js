@@ -1,13 +1,26 @@
-// pages/map/map.js
+
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-    longitude:'',
-    lattitude:'',
-    location:{lo:'',lt:''}
+    lat: 0,
+    lon: 0,
+    markers:[],
+    markersIcon:'/imgs/newMark.png',
+    location:{lon:'',lat:''},
+    controls: [{
+      id: 10, position: {
+        left: 20,
+        top:  20,
+        width:20,
+        height:20
+
+      }, iconPath: '/imgs/tab.jpg', clickable:true}],
+    polyline:[]
+    
+
 
   },
 
@@ -17,21 +30,39 @@ Page({
   onLoad: function (options) {
   
   },
+  regionchange(){},
+  getLocation(e){
+console.log('点击控件');
+    this.map.moveToLocation();
+  },
 
   /**
    * 生命周期函数--监听页面初次渲染完成
    */
   onReady: function () {
-    this.map = wx.createMapContext('myMap');
-//   wx.getLocation(function(res){
-// console.log(res);
+this.getCurLocation();
+//加载地图控件
+this.map=wx.createMapContext('myMap');
 
-//   })
-this.map.getCenterLocation(function(res){
+  },
+  getCurLocation(){
+    let t = this;
+    let data = t.data;
+    wx.getLocation({
+      success(res) {
+        t.setData({ lon: res.longitude });
+        t.setData({ lat: res.latitude });
+        // t.pushMarkers(data.lat,data.lon);
+      }
+    })
+  }
+  ,
+  pushMarkers(lat,lon){
+    let t = this;
+    let data = t.data;
+    data.markers.push({ id: data.markers.length, latitude: lat, longitude: lon, iconPath: data.markersIcon });
+    t.setData({ markers: data.markers })
 
-console.log(JSON.stringify(res))
-
-})
   },
 
   /**
