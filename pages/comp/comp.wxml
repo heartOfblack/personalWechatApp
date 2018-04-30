@@ -1,2 +1,0 @@
-<view class='name' bind:tap='getData'>
-222464</view>

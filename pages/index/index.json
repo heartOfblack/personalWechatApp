@@ -2,15 +2,9 @@
 
   "backgroundTextStyle": "light",
   "navigationBarBackgroundColor": "#fff",
-  "navigationBarTitleText": "WeCha1t",
+  "navigationBarTitleText": "KEEP GOING",
   "navigationBarTextStyle": "black",
-  "enablePullDownRefresh": true,
-  "usingComponents": {
-    "abs":"../abstratComponent/abstratComponent",
-    "custom":"../comp/comp",
-    "custom1":"../comp/comp1",
-    "au":"../component/audio/audio"
-  }
+  "enablePullDownRefresh": true
 
 
 

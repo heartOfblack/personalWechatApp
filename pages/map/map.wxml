@@ -1,3 +1,0 @@
- <view>
-<map id='myMap' longitude='{{lon}}' latitude='{{lat}}' markers='{{markers}}' bindtap='getLocation' show-location controls='{{controls}}' bindcontroltap='getLocation' style='width:100%;height:200px'></map>
-</view> 

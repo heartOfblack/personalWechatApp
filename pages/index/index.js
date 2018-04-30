@@ -6,63 +6,20 @@ const config=require("./../../config.js")
 
 Page({
   data: {
-    play:'false',
-    motto: 'Hello World',
-    userInfo: {},
-    hasUserInfo: false,
-    canIUse: wx.canIUse('button.open-type.getUserInfo'),
-    name:'siyuan1',
-    list:[1,2,3],
-    staffA: { firstName: 'Hulk', lastName: 'Hu' },
-    staffB: { firstName: 'Shang', lastName: 'You' },
-    staffC: { firstName: 'Gideon', lastName: 'Lin' },
-    array: [{
-      message: 'foo',
-    }, {
-      message: 'bar'
-    }],
-    config,
-   audioData: {
-    poster: 'http://y.gtimg.cn/music/photo_new/T002R300x300M000003rsKF44GyaSk.jpg?max_age=2592000',
-    name: '此时此刻',
-    author: '许巍',
-    src: '../../resoures/2744.wav',
-  }
+  play:true,//默认播放状态
+  playStyle:'play',
+  home:'',
+  experience:'',
+  skill:'',
+  curComponent:'home'//当前展示组件
   },
   onReady(){
- this.setData({play:true});
-   
-
-  },
-  show:function(e){
-console.log('自定义事件触发'+JSON.stringify(e.detail.detail));
-
-  },
-  //事件处理函数
-  bindViewTap: function() {
-    wx.navigateTo({
-      url: '../logs/logs'
-    })
-  },
-  onPullDownRefresh:function(e){
-console.log("下拉刷新");
-wx.stopPullDownRefresh();
-  },
-  change:function(e){
-this.setData({name:'wei'})
-
+    console.log('准备好');
+this.audio=wx.createAudioContext('music');
+this.audio.play();
   },
   onLoad: function (o) {
-    console.log('onload中');
-    var t=this;
-    wx.getUserInfo({
-      success: function (res) {
-console.log(t.route+'      onload');
-     
-      }
-    })
- 
-    if (app.globalData.userInfo) {
+  if (app.globalData.userInfo) {
       this.setData({
         userInfo: app.globalData.userInfo,
         hasUserInfo: true
@@ -99,52 +56,26 @@ console.log(t.route+'      onload');
   },
   onShareAppMessage: function () {
 
-    console.log('分享' + this.route);
-  
-    this.setData({
-      name: this.route,
-      k: 'k'
-    })
-    console.log(JSON.stringify(this.data.k));
-    return {
-      title: '没想到他居然',
-      path: '/' + this.route
-    }
   },
-  scan:function()
-  {
-    let t=this;
-wx.scanCode({
-  success:function(res)
-  {
- /*  res是一个JSON数据，包括result	所扫码的内容
-    scanType	所扫码的类型
-    charSet	所扫码的字符集
-    path	当所扫的码为当前小程序的合法二维码时，会返回此字段，内容为二维码携带的 path*/
-console.log(res);
-t.setData({
-  name:JSON.stringify(res),
-  k:'k'
-})
-console.log(t.k);
-  }
-})
+  changePlay(e){
+const data=e.currentTarget.dataset;
+    data.play && (this.setData({ playStyle: '' ,play:false}), this.audio.pause(),true) || (this.setData({ playStyle: 'play',play:true }),this.audio.play())
 
   },
-  //不可以跳转的到tab目标页面 
-  gohref:function(e){
-    console.log(1)
-/*    wx.navigateTo({
-      url: '/pages/logs1/logs1',
-      complete: function (res) {
-        console.log(res)
-      }
-    }) */
-var target=e.currentTarget.dataset;
-    console.log('/' + target.href)
-wx.navigateTo({
-  url:'/'+target.href
-})
+  musicPlay(){
+    this.setData({ play: true, playStyle:'play'})
+  }
+  ,
+  tab(e){
+    const data = e.currentTarget;
+    this.setData({home:'',experience:'',skill:''});
+   switch(data.id)//切换组件
+   {
+     case 'home': this.setData({ home:'footerBackground'});break;
+     case 'experience': this.setData({ experience: 'footerBackground' }); break;
+     case 'skill': this.setData({ skill: 'footerBackground' }); break;
+
+   }
 
   }
 })

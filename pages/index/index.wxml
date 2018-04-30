@@ -1,1 +1,15 @@
-主页<au name='siyuan' play='{{play}}'></au>
+
+<image src='../../imgs/music.jpg' bindtap='changePlay' class='{{"music "+playStyle}}' data-play='{{play}}'></image>
+
+<audio src='http://fs.w.kugou.com/201804300919/a82408181ca88d4e585eb483c89e6099/G029/M09/0A/0B/XQ0DAFWRI8aAReqHADrdvEdxSqw395.mp3' id='music' bindplay='musicPlay'></audio>
+<view>
+<image src='../../imgs/person.jpg' mode='aspectFit' class='person'></image>
+</view>
+<view class='contentComponent'></view>
+<view class='footer'>
+<view class='footerul'>
+<view class='{{"li "+home}}' bindtap='tab' id='home'>简介</view>
+<view  class='{{"li "+experience}}'  bindtap='tab' id='experience'>经历</view>
+<view  class='{{"li "+skill}}'  bindtap='tab' id='skill'>技能</view>
+</view>
+</view>

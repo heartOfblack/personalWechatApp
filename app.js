@@ -2,7 +2,7 @@
 App({
   onLaunch: function (option) {
 console.log('APP 运行函数'+JSON.stringify(option));
-
+this.audio = wx.createAudioContext('myaudio');//把它放到全局里面
     // 展示本地存储能力
     var logs = wx.getStorageSync('logs') || []
     logs.unshift(Date.now())
