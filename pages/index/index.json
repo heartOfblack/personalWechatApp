@@ -4,7 +4,12 @@
   "navigationBarBackgroundColor": "#fff",
   "navigationBarTitleText": "KEEP GOING",
   "navigationBarTextStyle": "black",
-  "enablePullDownRefresh": true
+ "usingComponents": {
+"com": "../component/main/main",
+"home": "../component/home/home",
+"experience": "../component/experience/experience",
+"skill": "../component/skill/skill"
+}
 
 
 

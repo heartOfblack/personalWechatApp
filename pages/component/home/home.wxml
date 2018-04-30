@@ -1,0 +1,6 @@
+<scroll-view scroll-y class='scroll'>
+<view class='list' wx:for="{{List}}" wx:key="*this">
+<image class='homeImg' src="{{item.src}}"></image>
+<text class='homeText' style='overflow:scroll'>{{item.content}}</text>
+</view>
+</scroll-view>

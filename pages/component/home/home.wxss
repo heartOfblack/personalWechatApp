@@ -1,0 +1,33 @@
+/* pages/component/home/home.wxss */
+.scroll
+{
+
+height: 260px;
+
+}
+
+.homeImg
+{
+  padding-left: 15px;
+width: 50px;
+height: 50px;
+margin-right: 10px;
+display: inline-block;
+
+}
+text.homeText
+{
+width: 200px;
+height: 50px;
+line-height: 50px;
+padding-left:40px;
+text-align: left; 
+display: inline-block;
+position: relative;
+font-family: "楷体";
+
+}
+.list
+{
+  margin-bottom: 10px;
+}

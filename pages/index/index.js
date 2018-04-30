@@ -2,7 +2,7 @@
 //获取应用实例
 
 const app = getApp()
-const config=require("./../../config.js")
+//const config=require("./../../config.js")
 
 Page({
   data: {
@@ -11,7 +11,9 @@ Page({
   home:'',
   experience:'',
   skill:'',
-  curComponent:'home'//当前展示组件
+  homeCom: false, //展示home组件
+  experienceCom: true,//当前展示组件
+  skillCom:false
   },
   onReady(){
     console.log('准备好');
@@ -68,12 +70,12 @@ const data=e.currentTarget.dataset;
   ,
   tab(e){
     const data = e.currentTarget;
-    this.setData({home:'',experience:'',skill:''});
+    this.setData({home:'',experience:'',skill:'',homeCom:false,experienceCom:false,skillCom:false});
    switch(data.id)//切换组件
    {
-     case 'home': this.setData({ home:'footerBackground'});break;
-     case 'experience': this.setData({ experience: 'footerBackground' }); break;
-     case 'skill': this.setData({ skill: 'footerBackground' }); break;
+     case 'home': this.setData({ home:'footerBackground',homeCom:true});break;
+     case 'experience': this.setData({ experience: 'footerBackground',experienceCom:true }); break;
+     case 'skill': this.setData({ skill: 'footerBackground',skillCom:true }); break;
 
    }
 

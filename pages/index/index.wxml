@@ -5,7 +5,12 @@
 <view>
 <image src='../../imgs/person.jpg' mode='aspectFit' class='person'></image>
 </view>
-<view class='contentComponent'></view>
+<view class='contentComponent'>
+ <com generic:routers="home" wx:if="{{homeCom}}"></com> 
+ <com generic:routers="experience" wx:if="{{experienceCom}}"></com> 
+ <com generic:routers="skill" wx:if="{{skillCom}}"></com> 
+
+</view>
 <view class='footer'>
 <view class='footerul'>
 <view class='{{"li "+home}}' bindtap='tab' id='home'>简介</view>
