@@ -1,8 +1,8 @@
 /* pages/component/home/home.wxss */
 .scroll
 {
-
-height: 260px;
+width: 100%;
+margin-bottom: 60px;
 
 }
 
@@ -30,4 +30,9 @@ font-family: "楷体";
 .list
 {
   margin-bottom: 10px;
+}
+.person
+{
+height: 150px;
+
 }

@@ -1,10 +1,8 @@
 
 <image src='../../imgs/music.jpg' bindtap='changePlay' class='{{"music "+playStyle}}' data-play='{{play}}'></image>
 
-<audio src='http://fs.w.kugou.com/201804300919/a82408181ca88d4e585eb483c89e6099/G029/M09/0A/0B/XQ0DAFWRI8aAReqHADrdvEdxSqw395.mp3' id='music' bindplay='musicPlay'></audio>
-<view>
-<image src='../../imgs/person.jpg' mode='aspectFit' class='person'></image>
-</view>
+<audio src='http://dl.stream.qqmusic.qq.com/C4000012QlX806JKLP.m4a?vkey=14328D219598C6121032DF3A1BA31E64D931502E1891244174E1C33D9D18A5411EF4646CBE2033C59E323CC547143641A8E9530365A669E4&guid=7876614348&uin=0&fromtag=66' id='music' bindplay='musicPlay'></audio>
+
 <view class='contentComponent'>
  <com generic:routers="home" wx:if="{{homeCom}}"></com> 
  <com generic:routers="experience" wx:if="{{experienceCom}}"></com> 

@@ -1,7 +1,9 @@
-<scroll-view scroll-y class='scroll'>
+<swiper autoplay indicator-dots circular indicator-color='white' indicator-active-color='gray' class='swiper'>
+<swiper-item wx:for='{{swiperList}}' wx:key="*this">
+ <image src="{{item}}" mode='widthFix' class="slide-image" /></swiper-item>
+</swiper>
 <view class='list' wx:for="{{List}}" wx:key="*this">
-<image class='homeImg' src="{{item.src}}"></image>
- <text class='homeText'>{{item.title}}</text> 
-<rich-text>{{item.content}}</rich-text>
+<view class='pt'>{{item.title}}</view>
+<view class='pc' wx:for='{{item.content}}' wx:key='*this'>{{item}}</view>
 </view>
-</scroll-view>
+

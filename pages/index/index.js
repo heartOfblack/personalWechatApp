@@ -8,12 +8,12 @@ Page({
   data: {
   play:true,//默认播放状态
   playStyle:'play',
-  home:'',
+  home:'footerBackground',
   experience:'',
   skill:'',
-  homeCom: false, //展示home组件
-  experienceCom: true,//当前展示组件
-  skillCom:false
+  homeCom: true, //展示home组件
+  experienceCom: false,//当前展示组件
+  skillCom: false
   },
   onReady(){
     console.log('准备好');

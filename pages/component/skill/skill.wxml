@@ -1,2 +1,8 @@
-<!--pages/component/skill/skill.wxml-->
-<text>pages/component/skill/skill.wxml</text>
+<view style='margin-top:60px;'>
+<view class='li' wx:for='{{skillList}}' wx:key="*this">
+<text>{{item.title}}</text>
+<progress backgroundColor='white' active percent='{{item.progress}}' stroke-width='10'></progress>
+</view>
+
+
+</view>
